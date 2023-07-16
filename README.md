@@ -17,7 +17,7 @@ In this project, we have four layers-
 * **Repository** - This layer mainatains the h2-database thing on which CRUD operations are performed
 * **Model** - This layer consists basically the class level things- the various classes required for the project and these classes consists the attributes to be stored.
 >## Data Structure used in my project
-**Student** 
+* **Student** 
 @Id
 private String ID;
 private String name;
@@ -28,7 +28,7 @@ private String department;
 @OneToOne
 private Address address;
 
-**Laptop**
+* **Laptop**
 @Id
 private String ID;
 private String name;
@@ -37,7 +37,7 @@ private Integer price;
 @OneToOne
 private Student student;
 
-**Course**
+* **Course**
 @Id
 private String ID;
 private String title;
@@ -46,7 +46,7 @@ private String duration;
 @ManyToMany
 List<Student> studentList;
 
-**Book**
+* **Book**
 @Id
 private String ID;
 private String title;
@@ -56,7 +56,7 @@ private String price;
 @ManyToOne
 private Student student;
 
-**Address**
+* **Address**
 private Long addressId;private String landmark;
 private String zipcode;
 private String district;
@@ -65,12 +65,12 @@ private String country;
 >## project summery
 
 *In the order entity class, 
-**@OneToOne**
+* **@OneToOne**
 This annotation to the Laptop attribute, to create a one-to-one mapping between Student and Laptop and 
 This annotation to the Address attribute, to create a one-to-one mapping between Student and Address 
-**@ManyToOne**
+* **@ManyToOne**
 This annotation to the Book attribute, to create a many-to-one mapping between Student and Book
-**@ManyToMany**
+* **@ManyToMany**
 This annotation to the Course attribute, to create a many-to-Many mapping between Student and Course
 
 we create five controller classes UserController, LaptopController, CourseController , BookController and AddressController, with the following methods to handle CRUD operations:
